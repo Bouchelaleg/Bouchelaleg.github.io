@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Houria Bouchelaleg – Ingénieure IA &amp; Machine Learning</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#0a0f14;--surface:#111b24;--ink:#e8f1f5;--muted:#8fa5b3;--line:#1f3140;--accent:#3de0ff;--box:#39ff88;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a0f14;--surface:#111b24;--ink:#e8f1f5;--muted:#8fa5b3;--line:#1f3140;--accent:#3de0ff;--box:#39ff88;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0a0f14;--surface:#111b24;--ink:#e8f1f5;--muted:#8fa5b3;--line:#1f3140;--accent:#3de0ff;--box:#39ff88;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 "IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:0 22px}
+a{color:var(--accent)}
+a:focus-visible{outline:3px solid var(--box);outline-offset:3px}
+h1,h2,h3{font-family:"Bricolage Grotesque","IBM Plex Sans",system-ui,sans-serif;line-height:1.15;margin:0}
+header{padding:64px 0 40px}
+.tag{position:relative;display:inline-block;padding:20px 26px 18px;border:2px solid var(--box);margin-top:14px;box-shadow:0 0 18px rgba(57,255,136,.35)}
+.tag::before{content:"Ingénieure IA";position:absolute;top:-14px;left:-2px;background:var(--box);color:#10181d;font:600 13px/1 "IBM Plex Sans",sans-serif;padding:6px 10px}
+h1{font-size:clamp(34px,8vw,58px);font-weight:700}
+.lead{max-width:60ch;font-size:18px;color:var(--muted);margin:26px 0 0}
+.links{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:22px;font-weight:500}
+section{padding:36px 0;border-top:1px solid var(--line)}
+h2{font-size:26px;margin-bottom:20px}
+.feat{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--box);padding:26px 24px;border-radius:4px}
+.feat h3{font-size:24px}
+.meta{color:var(--muted);font-size:14.5px;margin:6px 0 16px}
+.feat p{max-width:66ch;margin:0 0 14px}
+ul.steps{margin:0 0 16px;padding-left:20px;max-width:66ch}
+ul.steps li{margin-bottom:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chips li{border:1px solid var(--line);padding:3px 11px;border-radius:99px;font-size:13.5px;background:var(--bg)}
+.classes{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;margin:0 0 18px;padding:0;list-style:none}
+.classes li{border:1px solid var(--box);padding:8px 12px;font-size:14.5px;border-radius:2px}
+.result{font-weight:600}
+.others{display:grid;gap:22px}
+.proj{padding-bottom:22px;border-bottom:1px solid var(--line)}
+.proj:last-child{border-bottom:0;padding-bottom:0}
+.proj h3{font-size:20px}
+.proj p{margin:0 0 12px;max-width:66ch}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px 28px}
+.skills h3{font-size:16px;margin-bottom:6px}
+.skills p{margin:0;color:var(--muted);font-size:15px}
+.note{font-size:14px;color:var(--muted);margin-top:18px;max-width:66ch}
+footer{padding:36px 0 56px;border-top:1px solid var(--line)}
+footer p{margin:0 0 6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="tag"><h1>Houria Bouchelaleg</h1></div>
+  <p class="lead">Ingénieure en IA (Master 2, Université d’Alger 1). Je conçois des modèles de Computer Vision et je les mets en service dans des applications web et mobiles. Basée à Alger.</p>
+  <div class="links">
+    <a href="mailto:houria17d@gmail.com">houria17d@gmail.com</a>
+    <a href="https://linkedin.com/in/houria-bouchelaleg-182006183">LinkedIn</a>
+  </div>
+</header>
+
+<section id="projets">
+  <h2>Projet principal</h2>
+  <article class="feat">
+    <h3>Contrôle automatique de l’état des rails de tramway</h3>
+    <p class="meta">Projet de fin d’études, Master 2 · réalisé avec la SETRAM (tramway d’Alger) · 2022</p>
+    <p>Le contrôle des rails se fait à l’œil. J’ai construit un système qui repère et localise l’usure à partir d’une simple photo.</p>
+    <ul class="steps">
+      <li>Création d’un jeu de données de <strong>705 images</strong> de rails, prises au smartphone.</li>
+      <li>Segmentation des images avec <strong>Mask R-CNN</strong>, annotation avec LabelMe.</li>
+      <li>Annotation pour la détection d’usure, puis augmentation des données : flou, rotations à gauche et à droite, rotation à 180°.</li>
+      <li>Comparaison de deux modèles : <strong>VGG16</strong> pour la classification et <strong>YOLO v4</strong> pour la détection et la localisation.</li>
+      <li>Application web <strong>Flask</strong> : l’utilisateur charge une photo et obtient la classe d’usure avec sa position sur le rail.</li>
+    </ul>
+    <ul class="classes">
+      <li>Usure ondulatoire</li><li>Usure de type champignon</li><li>Usure de la bavette</li><li>Rail sans usure</li>
+    </ul>
+    <p class="result">Résultat : 80 % de précision avec YOLO v4.</p>
+    <ul class="chips"><li>Python</li><li>TensorFlow</li><li>Keras</li><li>YOLO v4</li><li>VGG16</li><li>Mask R-CNN</li><li>LabelMe</li><li>Flask</li></ul>
+  </article>
+</section>
+
+<section>
+  <h2>Autres projets</h2>
+  <div class="others">
+    <article class="proj">
+      <h3>Gestion des marges de vente de machines à coudre</h3>
+      <p class="meta">Juin 2026</p>
+      <p>Application qui permet de gérer et de calculer les marges réalisées sur la vente de machines à coudre.</p>
+    </article>
+    <article class="proj">
+      <h3>Intranet institutionnel, INAPI</h3>
+      <p class="meta">Institut National Algérien de la Propriété Industrielle · depuis avril 2025</p>
+      <p>Mise à jour et optimisation de l’intranet : messagerie interne, partage de documents et notifications. Les délais de traitement internes ont diminué et la productivité a progressé.</p>
+      <ul class="chips"><li>Laravel</li><li>SQL</li><li>Oracle</li></ul>
+    </article>
+    <article class="proj">
+      <h3>Applications mobiles, INAPI</h3>
+      <p class="meta">Depuis avril 2025</p>
+      <p>Développement d’applications mobiles Flutter reliées à un backend Laravel, avec gestion et optimisation des bases de données SQL et Oracle.</p>
+      <ul class="chips"><li>Flutter</li><li>Laravel</li><li>SQL</li><li>Oracle</li></ul>
+    </article>
+    <article class="proj">
+      <h3>Gestion du parc informatique, Touring Club d’Alger</h3>
+      <p class="meta">Stage · juin – octobre 2020</p>
+      <p>Création d’un système de gestion du parc informatique, avec une application web et une application bureau. Le temps de gestion des actifs informatiques a baissé de 40 %.</p>
+      <ul class="chips"><li>PHP</li><li>C#</li><li>WPF</li></ul>
+    </article>
+  </div>
+  <p class="note">Les projets INAPI sont des systèmes internes : ils sont décrits ici sans code ni données.</p>
+</section>
+
+<section>
+  <h2>Compétences</h2>
+  <div class="skills">
+    <div><h3>IA et data</h3><p>Machine Learning, Deep Learning, Computer Vision, NLP, analyse prédictive</p></div>
+    <div><h3>Bibliothèques</h3><p>TensorFlow, PyTorch, Keras</p></div>
+    <div><h3>Développement</h3><p>Python, Java, C++, PHP, SQL, Laravel, Flutter, .NET</p></div>
+    <div><h3>Outils</h3><p>Git, SQL Server, Oracle, VS Code</p></div>
+  </div>
+</section>
+
+<footer>
+  <h2>Me contacter</h2>
+  <p>Je cherche un poste d’ingénieure IA à Alger.</p>
+  <p><a href="mailto:houria17d@gmail.com">houria17d@gmail.com</a> · <a href="https://linkedin.com/in/houria-bouchelaleg-182006183">LinkedIn</a></p>
+</footer>
+</div>
+</body>
+</html>
